@@ -26,10 +26,22 @@ const profile = () => {
         )}
         keyExtractor={item => item.id}
         ListHeaderComponent={()=>(
-          <View>
-              <Text>
+          <View style={styles.profileText}> 
+               <Text style={styles.miniCard}>J</Text>
+
+              <Text style={{marginTop:12,marginBottom:17 ,color:"white",fontSize:16,fontWeight:"bold"}}>
                 jsmastry
               </Text>
+             <View style={styles.text}>
+              <View style={styles.profileText}>
+                <Text style={{color:"white",fontSize:16,fontWeight:"bold",marginRight:20}}>4</Text>
+                <Text style={{color:"white",fontSize:14,marginRight:20}}>Posts</Text>
+              </View>
+              <View style={styles.profileText}>
+               <Text style={{color:"white",fontSize:16,fontWeight:"bold",marginLeft:24}}>1.2K</Text>
+                <Text style={{color:"white",fontSize:14,marginLeft:24}}>followers</Text>
+              </View>
+              </View> 
           </View>
         )}
         
@@ -45,7 +57,28 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#1E1E2D",
     height: "100%",
-  
     
+  },
+  profileText:{
+    display:"flex",
+    flexDirection:"column",
+    alignItems:"center"
+  },
+  text:{
+    display:"flex",
+    flexDirection:"row"
+  },
+  miniCard:{
+    marginTop:10,
+    backgroundColor:"#79F8F8",
+    borderRadius:10,
+    borderWidth:1,
+    borderColor:"#686F8C",
+    width:40,
+     paddingTop:10,
+     paddingBottom:10,
+    textAlign:"center",
+    fontWeight:"bold",
+    marginRight:10
   },
 })
